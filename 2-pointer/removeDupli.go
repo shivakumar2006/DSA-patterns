@@ -25,3 +25,5 @@ func removeDupli(arr []int) int {
 	}
 	return res
 }
+
+// time O(n), space O(1)
