@@ -26,3 +26,6 @@ func sum(arr []int, tar int) []int {
 	}
 	return []int{-1, -1}
 }
+
+// time complexity O(n)
+// space O(1)
