@@ -29,3 +29,4 @@ func rearrange(arr []int) []int {
 
 // time O(n)
 // space O(1)
+// in place swapping
