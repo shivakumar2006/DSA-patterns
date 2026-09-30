@@ -52,3 +52,7 @@ func sum(arr []int) [][]int {
 	}
 	return result
 }
+
+// time O(n^2)
+// space O(1) excluding output
+// space O(n^2) worst case
