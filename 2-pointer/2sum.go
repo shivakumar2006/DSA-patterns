@@ -9,16 +9,17 @@ func main() {
 	fmt.Println(res)
 }
 
-func sum(arr []int, tar int) []int {
+func sum(arr []int, target int) []int {
 	i := 0
 	j := len(arr) - 1
 
 	for i < j {
 		sum := arr[i] + arr[j]
-		if sum == tar {
+
+		if sum == target {
 			return []int{i + 1, j + 1}
 		}
-		if sum > tar {
+		if sum > target {
 			j--
 		} else {
 			i++
@@ -26,6 +27,24 @@ func sum(arr []int, tar int) []int {
 	}
 	return []int{-1, -1}
 }
+
+// func sum(arr []int, tar int) []int {
+// 	i := 0
+// 	j := len(arr) - 1
+
+// 	for i < j {
+// 		sum := arr[i] + arr[j]
+// 		if sum == tar {
+// 			return []int{i + 1, j + 1}
+// 		}
+// 		if sum > tar {
+// 			j--
+// 		} else {
+// 			i++
+// 		}
+// 	}
+// 	return []int{-1, -1}
+// }
 
 // time complexity O(n)
 // space O(1)
