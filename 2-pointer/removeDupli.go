@@ -12,18 +12,38 @@ func removeDupli(arr []int) int {
 	i := 0
 	j := i + 1
 
-	res := 1
+	result := 1
 
 	for j < len(arr) {
 		if arr[i] == arr[j] {
 			j++
 			continue
 		}
+
 		i++
-		res++
+		result++
 		arr[i] = arr[j]
+
 	}
-	return res
+	return result
 }
+
+// func removeDupli(arr []int) int {
+// 	i := 0
+// 	j := i + 1
+
+// 	res := 1
+
+// 	for j < len(arr) {
+// 		if arr[i] == arr[j] {
+// 			j++
+// 			continue
+// 		}
+// 		i++
+// 		res++
+// 		arr[i] = arr[j]
+// 	}
+// 	return res
+// }
 
 // time O(n), space O(1)
