@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	arr := []int{-1, 0, 1, 2, -1, -4}
+	arr := []int{-1, 0, 1, 2, -1, -4} // [-4, -1, -1, 0, 1, 2]
 	fmt.Println(sum(arr))
 }
 
