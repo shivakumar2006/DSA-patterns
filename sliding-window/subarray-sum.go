@@ -37,3 +37,33 @@ func minSubArray(arr []int, target int) int {
 
 	return minLen
 }
+
+// time O(n)
+// space O(1)
+
+// func minSubArray(arr []int, target int) int {
+// 	left := 0
+// 	sum := 0
+// 	minLen := len(arr) + 1
+
+// 	for right := 0; right < len(arr); right++ {
+// 		sum += arr[right]
+
+// 		for sum >= target {
+// 			length := right - left + 1
+
+// 			if length < minLen {
+// 				minLen = length
+// 			}
+
+// 			sum -= arr[left]
+// 			left++
+// 		}
+// 	}
+
+// 	if minLen == len(arr)+1 {
+// 		return 0
+// 	}
+
+// 	return minLen
+// }
