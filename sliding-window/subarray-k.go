@@ -20,10 +20,9 @@ func maxSum(arr []int, k int) int {
 
 	maxSum := windowSum
 
-	// slide the window
 	for i := k; i < len(arr); i++ {
-		windowSum += arr[i]   // new element added
-		windowSum -= arr[i-k] // old element remove
+		windowSum += arr[i]
+		windowSum -= arr[i-k]
 
 		if windowSum > maxSum {
 			maxSum = windowSum
@@ -32,6 +31,28 @@ func maxSum(arr []int, k int) int {
 
 	return maxSum
 }
+
+// func maxSum(arr []int, k int) int {
+// 	windowSum := 0
+
+// 	for i := 0; i < k; i++ {
+// 		windowSum += arr[i]
+// 	}
+
+// 	maxSum := windowSum
+
+// 	// slide the window
+// 	for i := k; i < len(arr); i++ {
+// 		windowSum += arr[i]   // new element added
+// 		windowSum -= arr[i-k] // old element remove
+
+// 		if windowSum > maxSum {
+// 			maxSum = windowSum
+// 		}
+// 	}
+
+// 	return maxSum
+// }
 
 // time O(n)
 // space O(1)
