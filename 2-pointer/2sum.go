@@ -29,6 +29,25 @@ func sum(arr []int, target int) []int {
 }
 
 // func sum(arr []int, target int) []int {
+// 	left := 0
+// 	right := len(arr) - 1
+
+// 	for left < right {
+// 		sum := arr[left] + arr[right]
+
+// 		if sum == target {
+// 			return []int{left + 1, right + 1}
+// 		} else if sum < target {
+// 			left++
+// 		} else {
+// 			right--
+// 		}
+// 	}
+
+// 	return []int{-1, -1}
+// }
+
+// func sum(arr []int, target int) []int {
 // 	i := 0
 // 	j := len(arr) - 1
 
