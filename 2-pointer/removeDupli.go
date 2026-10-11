@@ -17,6 +17,7 @@ func removeDupli(arr []int) int {
 	for right < len(arr) {
 		if arr[left] == arr[right] {
 			right++
+			continue
 		}
 		left++
 		result++
