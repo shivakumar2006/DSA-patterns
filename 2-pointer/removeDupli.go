@@ -9,24 +9,42 @@ func main() {
 }
 
 func removeDupli(arr []int) int {
-	i := 0
-	j := i + 1
+	left := 0
+	right := left + 1
 
 	result := 1
 
-	for j < len(arr) {
-		if arr[i] == arr[j] {
-			j++
-			continue
+	for right < len(arr) {
+		if arr[left] == arr[right] {
+			right++
 		}
-
-		i++
+		left++
 		result++
-		arr[i] = arr[j]
-
+		arr[left] = arr[right]
 	}
+
 	return result
 }
+
+// func removeDupli(arr []int) int {
+// 	i := 0
+// 	j := i + 1
+
+// 	result := 1
+
+// 	for j < len(arr) {
+// 		if arr[i] == arr[j] {
+// 			j++
+// 			continue
+// 		}
+
+// 		i++
+// 		result++
+// 		arr[i] = arr[j]
+
+// 	}
+// 	return result
+// }
 
 // func removeDupli(arr []int) int {
 // 	i := 0
