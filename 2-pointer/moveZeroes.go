@@ -20,3 +20,6 @@ func moveZeroes(arr []int) {
 		}
 	}
 }
+
+// time O(n)
+// space O(1)
