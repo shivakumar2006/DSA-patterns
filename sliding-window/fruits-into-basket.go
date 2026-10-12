@@ -30,6 +30,7 @@ func basket(arr []int) int {
 		}
 
 		length := right - left + 1
+
 		if length > result {
 			result = length
 		}
@@ -37,6 +38,34 @@ func basket(arr []int) int {
 
 	return result
 }
+
+// func basket(arr []int) int {
+// 	freq := make(map[int]int)
+
+// 	left := 0
+// 	result := -1
+
+// 	for right := 0; right < len(arr); right++ {
+// 		freq[arr[right]]++
+
+// 		for len(freq) > 2 {
+// 			freq[arr[left]]--
+
+// 			if freq[arr[left]] == 0 {
+// 				delete(freq, arr[left])
+// 			}
+
+// 			left++
+// 		}
+
+// 		length := right - left + 1
+// 		if length > result {
+// 			result = length
+// 		}
+// 	}
+
+// 	return result
+// }
 
 // time O(n)
 // space O(n)
