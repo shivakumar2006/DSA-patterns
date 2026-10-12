@@ -34,3 +34,31 @@ func container(arr []int) int {
 
 	return maxArea
 }
+
+// func container(arr []int) int {
+// 	left := 0
+// 	right := len(arr) - 1
+
+// 	maxArea := 0
+
+// 	for left < right {
+// 		width := right - left
+// 		height := min(arr[left], arr[right])
+// 		area := width * height
+
+// 		if arr[left] < arr[right] {
+// 			left++
+// 		} else {
+// 			right--
+// 		}
+
+// 		if maxArea < area {
+// 			maxArea = area
+// 		}
+// 	}
+
+// 	return maxArea
+// }
+
+// time O(n)
+// space O(1)
