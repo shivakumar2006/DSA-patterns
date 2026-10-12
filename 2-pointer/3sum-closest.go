@@ -13,7 +13,7 @@ func main() {
 	target := 1
 	res := closest(arr, target)
 	fmt.Println(res)
-}
+
 
 func closest(arr []int, target int) int {
 	sort.Ints(arr)
