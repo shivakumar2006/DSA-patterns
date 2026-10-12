@@ -28,6 +28,25 @@ func removeDupli(arr []int) int {
 }
 
 // func removeDupli(arr []int) int {
+// 	left := 0
+// 	right := left + 1
+
+// 	result := 1
+
+// 	for right < len(arr) {
+// 		if arr[left] == arr[right] {
+// 			right++
+// 			continue
+// 		}
+// 		left++
+// 		result++
+// 		arr[left] = arr[right]
+// 	}
+
+// 	return result
+// }
+
+// func removeDupli(arr []int) int {
 // 	i := 0
 // 	j := i + 1
 
