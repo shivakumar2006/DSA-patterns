@@ -25,14 +25,12 @@ func characterReplacement(s string, k int) int {
 			maxFreq = freq[s[right]]
 		}
 
-		length := right - left + 1
-
-		if length-maxFreq > k {
+		if (right-left+1)-maxFreq > k {
 			freq[s[left]]--
 			left++
 		}
 
-		length = right - left + 1
+		length := right - left + 1
 
 		if length > maxLen {
 			maxLen = length
