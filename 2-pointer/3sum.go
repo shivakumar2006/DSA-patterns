@@ -40,6 +40,7 @@ func sum(arr []int) [][]int {
 				for left < right && arr[right] == arr[right+1] {
 					right--
 				}
+
 			} else if sum < 0 {
 				left++
 			} else {
@@ -50,6 +51,45 @@ func sum(arr []int) [][]int {
 
 	return result
 }
+
+// func sum(arr []int) [][]int {
+// 	sort.Ints(arr)
+
+// 	result := [][]int{}
+
+// 	for i := 0; i < len(arr)-2; i++ {
+// 		if i > 0 && arr[i] == arr[i-1] {
+// 			continue
+// 		}
+
+// 		left := i + 1
+// 		right := len(arr) - 1
+
+// 		for left < right {
+// 			sum := arr[i] + arr[left] + arr[right]
+
+// 			if sum == 0 {
+// 				result = append(result, []int{arr[i], arr[left], arr[right]})
+// 				left++
+// 				right--
+
+// 				for left < right && arr[left] == arr[left-1] {
+// 					left++
+// 				}
+
+// 				for left < right && arr[right] == arr[right+1] {
+// 					right--
+// 				}
+// 			} else if sum < 0 {
+// 				left++
+// 			} else {
+// 				right--
+// 			}
+// 		}
+// 	}
+
+// 	return result
+// }
 
 // func sum(arr []int) [][]int {
 // 	sort.Ints(arr)
