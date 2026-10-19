@@ -11,11 +11,11 @@ func main() {
 	fmt.Println(element(arr, val))
 }
 
-func element(arr []int, value int) int {
+func element(arr []int, val int) int {
 	slow := 0
 
 	for fast := 0; fast < len(arr); fast++ {
-		if arr[fast] != value {
+		if arr[fast] != val {
 			arr[slow] = arr[fast]
 			slow++
 		}
@@ -23,6 +23,19 @@ func element(arr []int, value int) int {
 
 	return slow
 }
+
+// func element(arr []int, value int) int {
+// 	slow := 0
+
+// 	for fast := 0; fast < len(arr); fast++ {
+// 		if arr[fast] != value {
+// 			arr[slow] = arr[fast]
+// 			slow++
+// 		}
+// 	}
+
+// 	return slow
+// }
 
 // func element(arr []int, value int) int {
 // 	slow := 0
