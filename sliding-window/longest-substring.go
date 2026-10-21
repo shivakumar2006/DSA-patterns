@@ -46,6 +46,37 @@ func lengthOfLongestSubstringKUnique(s string, k int) int {
 // 	freq := make(map[byte]int)
 
 // 	left := 0
+// 	result := 0
+
+// 	for right := 0; right < len(s); right++ {
+// 		freq[s[right]]++
+
+// 		for len(freq) > k {
+// 			freq[s[left]]--
+
+// 			if freq[s[left]] == 0 {
+// 				delete(freq, s[left])
+// 			}
+
+// 			left++
+// 		}
+
+// 		if len(freq) == k {
+// 			length := right - left + 1
+
+// 			if length > result {
+// 				result = length
+// 			}
+// 		}
+// 	}
+
+// 	return result
+// }
+
+// func lengthOfLongestSubstringKUnique(s string, k int) int {
+// 	freq := make(map[byte]int)
+
+// 	left := 0
 // 	result := -1
 
 // 	for right := 0; right < len(s); right++ {
