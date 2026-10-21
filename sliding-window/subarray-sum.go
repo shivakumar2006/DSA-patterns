@@ -19,7 +19,7 @@ func minSubArray(arr []int, target int) int {
 	for right := 0; right < len(arr); right++ {
 		sum += arr[right]
 
-		if sum >= target {
+		for sum >= target {
 			length := right - left + 1
 
 			if length < minLen {
