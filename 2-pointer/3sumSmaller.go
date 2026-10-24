@@ -28,11 +28,11 @@ func smaller(arr []int, target int) int {
 
 			if sum < target {
 				count += right - left
-				right--
+				left++
 			}
 
 			if sum >= target {
-				left++
+				right--
 			}
 		}
 	}
