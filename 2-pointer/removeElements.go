@@ -12,17 +12,30 @@ func main() {
 }
 
 func element(arr []int, val int) int {
-	slow := 0
+	left := 0
 
-	for fast := 0; fast < len(arr); fast++ {
-		if arr[fast] != val {
-			arr[slow] = arr[fast]
-			slow++
+	for right := 0; right < len(arr); right++ {
+		if arr[right] != val {
+			arr[left] = arr[right]
+			left++
 		}
 	}
 
-	return slow
+	return left
 }
+
+// func element(arr []int, val int) int {
+// 	slow := 0
+
+// 	for fast := 0; fast < len(arr); fast++ {
+// 		if arr[fast] != val {
+// 			arr[slow] = arr[fast]
+// 			slow++
+// 		}
+// 	}
+
+// 	return slow
+// }
 
 // func element(arr []int, value int) int {
 // 	slow := 0
