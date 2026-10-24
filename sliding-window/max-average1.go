@@ -1,4 +1,5 @@
 // maximum average subarray 1
+//https://leetcode.com/problems/maximum-average-subarray-i/description/?utm_source=chatgpt.com
 
 package main
 
