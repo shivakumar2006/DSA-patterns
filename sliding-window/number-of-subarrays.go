@@ -34,3 +34,6 @@ func numOfSubarrays(arr []int, k int, threshold int) int {
 
 	return count
 }
+
+// time O(n)
+// space O(1)
