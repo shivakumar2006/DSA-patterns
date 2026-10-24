@@ -21,7 +21,7 @@ func maxConsecutiveOnes(arr []int, k int) int {
 			zeroes++
 		}
 
-		if zeroes > k {
+		for zeroes > k {
 			if arr[left] == 0 {
 				zeroes--
 			}
@@ -29,7 +29,6 @@ func maxConsecutiveOnes(arr []int, k int) int {
 		}
 
 		length := right - left + 1
-
 		if length > maxLen {
 			maxLen = length
 		}
@@ -37,6 +36,33 @@ func maxConsecutiveOnes(arr []int, k int) int {
 
 	return maxLen
 }
+
+// func maxConsecutiveOnes(arr []int, k int) int {
+// 	left := 0
+// 	zeroes := 0
+// 	maxLen := 0
+
+// 	for right := 0; right < len(arr); right++ {
+// 		if arr[right] == 0 {
+// 			zeroes++
+// 		}
+
+// 		if zeroes > k {
+// 			if arr[left] == 0 {
+// 				zeroes--
+// 			}
+// 			left++
+// 		}
+
+// 		length := right - left + 1
+
+// 		if length > maxLen {
+// 			maxLen = length
+// 		}
+// 	}
+
+// 	return maxLen
+// }
 
 // func maxConsecutiveOnes(arr []int, k int) int {
 // 	left := 0
