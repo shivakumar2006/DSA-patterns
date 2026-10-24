@@ -65,6 +65,25 @@ func rearrange(arr []int) []int {
 // }
 
 // func rearrange(arr []int) []int {
+// 	left := 0
+// 	right := len(arr) - 1
+
+// 	for left < right {
+// 		if arr[left] == 0 {
+// 			left++
+// 		} else if arr[right] == 1 {
+// 			right--
+// 		} else {
+// 			arr[left], arr[right] = arr[right], arr[left]
+// 			left++
+// 			right--
+// 		}
+// 	}
+
+// 	return arr
+// }
+
+// func rearrange(arr []int) []int {
 // 	i := 0
 // 	j := len(arr) - 1
 
