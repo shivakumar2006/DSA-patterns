@@ -46,3 +46,6 @@ func maximumSubarraySum(arr []int, k int) int {
 
 	return maxSum
 }
+
+// time O(n)
+// space O(k) cause freq map has at most k distinct elements
