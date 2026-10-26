@@ -12,49 +12,32 @@ func main() {
 	fmt.Println(minWindow(s, t))
 }
 
-func minWindow(s string, t string) string {
-	if len(t) > len(s) {
+func minWindow(s, t string) string {
+	if len(s) < len(t) {
 		return ""
 	}
 
-	need := make(map[byte]int)
-
+	needed := make(map[byte]int)
 	for i := 0; i < len(t); i++ {
-		need[t[i]]++
+		needed[t[i]]++
 	}
 
+	have := make(map[byte]int)
 	left := 0
-	required := len(need)
-	formed := 0
-
-	window := make(map[byte]int)
-
-	minLen := len(s) + 1
 	start := 0
+	minLen := len(s) + 1
 
 	for right := 0; right < len(s); right++ {
-		ch := s[right]
-		window[ch]++
+		have[s[right]]++
 
-		if count, exists := need[ch]; exists && window[ch] == count {
-			formed++
-		}
-
-		for formed == required {
+		for correct(have, needed) {
 			length := right - left + 1
-
 			if length < minLen {
 				minLen = length
 				start = left
 			}
 
-			leftChar := s[left]
-			window[leftChar]--
-
-			if count, exists := need[leftChar]; exists && window[leftChar] < count {
-				formed--
-			}
-
+			have[s[left]]--
 			left++
 		}
 	}
@@ -65,3 +48,67 @@ func minWindow(s string, t string) string {
 
 	return s[start : start+minLen]
 }
+
+func correct(have, needed map[byte]int) bool {
+	for ch, requiredCount := range needed {
+		if have[ch] < requiredCount {
+			return false
+		}
+	}
+
+	return true
+}
+
+// func minWindow(s string, t string) string {
+// 	if len(t) > len(s) {
+// 		return ""
+// 	}
+
+// 	need := make(map[byte]int)
+
+// 	for i := 0; i < len(t); i++ {
+// 		need[t[i]]++
+// 	}
+
+// 	left := 0
+// 	required := len(need)
+// 	formed := 0
+
+// 	window := make(map[byte]int)
+
+// 	minLen := len(s) + 1
+// 	start := 0
+
+// 	for right := 0; right < len(s); right++ {
+// 		ch := s[right]
+// 		window[ch]++
+
+// 		if count, exists := need[ch]; exists && window[ch] == count {
+// 			formed++
+// 		}
+
+// 		for formed == required {
+// 			length := right - left + 1
+
+// 			if length < minLen {
+// 				minLen = length
+// 				start = left
+// 			}
+
+// 			leftChar := s[left]
+// 			window[leftChar]--
+
+// 			if count, exists := need[leftChar]; exists && window[leftChar] < count {
+// 				formed--
+// 			}
+
+// 			left++
+// 		}
+// 	}
+
+// 	if minLen == len(s)+1 {
+// 		return ""
+// 	}
+
+// 	return s[start : start+minLen]
+// }
