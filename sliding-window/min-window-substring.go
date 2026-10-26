@@ -59,6 +59,9 @@ func correct(have, needed map[byte]int) bool {
 	return true
 }
 
+// time O(s * t)
+// space O(s * t)
+
 // func minWindow(s string, t string) string {
 // 	if len(t) > len(s) {
 // 		return ""
