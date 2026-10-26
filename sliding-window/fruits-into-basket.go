@@ -271,4 +271,4 @@ func basket(arr []int) int {
 // }
 
 // time O(n)
-// space O(n)
+// space O(1)
