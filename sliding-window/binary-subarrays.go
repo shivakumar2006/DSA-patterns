@@ -38,3 +38,6 @@ func atMost(arr []int, goal int) int {
 
 	return count
 }
+
+// time O(n)
+// extra space O(1)
