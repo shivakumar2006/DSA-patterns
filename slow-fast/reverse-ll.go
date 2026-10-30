@@ -29,7 +29,6 @@ func (l *LinkedList) Insert(value int) {
 }
 
 func (l *LinkedList) Reverse() {
-	l.tail = l.head
 	var prev *Node
 	current := l.head
 
