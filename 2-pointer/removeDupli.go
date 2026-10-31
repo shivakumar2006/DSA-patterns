@@ -13,7 +13,6 @@ func removeDupli(arr []int) int {
 	right := left + 1
 
 	result := 1
-
 	for right < len(arr) {
 		if arr[left] == arr[right] {
 			right++
@@ -26,6 +25,25 @@ func removeDupli(arr []int) int {
 	}
 	return result
 }
+
+// func removeDupli(arr []int) int {
+// 	left := 0
+// 	right := left + 1
+
+// 	result := 1
+
+// 	for right < len(arr) {
+// 		if arr[left] == arr[right] {
+// 			right++
+// 			continue
+// 		}
+
+// 		left++
+// 		result++
+// 		arr[left] = arr[right]
+// 	}
+// 	return result
+// }
 
 // func removeDupli(arr []int) int {
 // 	left := 0
