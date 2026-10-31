@@ -20,9 +20,21 @@ func element(arr []int, val int) int {
 			left++
 		}
 	}
-
 	return left
 }
+
+// func element(arr []int, val int) int {
+// 	left := 0
+
+// 	for right := 0; right < len(arr); right++ {
+// 		if arr[right] != val {
+// 			arr[left] = arr[right]
+// 			left++
+// 		}
+// 	}
+
+// 	return left
+// }
 
 // func element(arr []int, val int) int {
 // 	slow := 0
