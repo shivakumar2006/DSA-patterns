@@ -12,7 +12,7 @@ func main() {
 	arr := []int{-2, 0, 1, 3}
 	target := 2
 	fmt.Println(smaller(arr, target))
-}
+}c
 
 func smaller(arr []int, target int) int {
 	sort.Ints(arr)
