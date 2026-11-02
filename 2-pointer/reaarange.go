@@ -1,3 +1,6 @@
+// rearrange 0 and 1
+// https://www.geeksforgeeks.org/problems/segregate-0s-and-1s5106/1
+
 package main
 
 import "fmt"
@@ -25,6 +28,25 @@ func rearrange(arr []int) []int {
 
 	return arr
 }
+
+// func rearrange(arr []int) []int {
+// 	left := 0
+// 	right := len(arr) - 1
+
+// 	for left < right {
+// 		if arr[left] == 0 {
+// 			left++
+// 		} else if arr[right] == 1 {
+// 			right--
+// 		} else {
+// 			arr[left], arr[right] = arr[right], arr[left]
+// 			left++
+// 			right--
+// 		}
+// 	}
+
+// 	return arr
+// }
 
 // func rearrange(arr []int) []int {
 // 	left := 0
