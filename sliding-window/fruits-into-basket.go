@@ -1,5 +1,6 @@
 // Fruits into basket
 // https://leetcode.com/problems/fruit-into-baskets/description/
+// https://leetcode.com/problems/fruit-into-baskets/?utm_source=chatgpt.com
 
 package main
 
