@@ -1,3 +1,6 @@
+// two sum II
+// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
 package main
 
 import "fmt"
