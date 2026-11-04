@@ -3,13 +3,6 @@
 
 package main
 
-import "fmt"
-
-func main() {
-	arr := []int{-4, -1, 0, 3, 10}
-	fmt.Println(sortSquares(arr))
-}
-
 func sortSquares(arr []int) []int {
 	n := len(arr)
 
@@ -198,3 +191,6 @@ func abs(n int) int {
 // 	}
 // 	return n
 // }
+
+// time O(n)
+// space O(n)
