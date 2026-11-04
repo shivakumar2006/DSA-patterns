@@ -32,5 +32,26 @@ func findMaxAverage(arr []int, k int) float64 {
 	return float64(maxSum) / float64(k)
 }
 
+// func findMaxAverage(arr []int, k int) float64 {
+// 	currentSum := 0
+
+// 	for i := 0; i < k; i++ {
+// 		currentSum += arr[i]
+// 	}
+
+// 	maxSum := currentSum
+
+// 	for i := k; i < len(arr); i++ {
+// 		currentSum += arr[i]
+// 		currentSum -= arr[i-k]
+
+// 		if currentSum > maxSum {
+// 			maxSum = currentSum
+// 		}
+// 	}
+
+// 	return float64(maxSum) / float64(k)
+// }
+
 // time O(n)
 // space O(1)
