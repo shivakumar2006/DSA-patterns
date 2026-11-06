@@ -34,6 +34,23 @@ func maxSubArray(arr []int) int {
 // 	for i := 1; i < len(arr); i++ {
 // 		v1 := arr[i]
 // 		v2 := currentSum + arr[i]
+
+// 		currentSum = max(v1, v2)
+
+// 		if currentSum > maxSum {
+// 			maxSum = currentSum
+// 		}
+// 	}
+// 	return maxSum
+// }
+
+// func maxSubArray(arr []int) int {
+// 	currentSum := arr[0]
+// 	maxSum := arr[0]
+
+// 	for i := 1; i < len(arr); i++ {
+// 		v1 := arr[i]
+// 		v2 := currentSum + arr[i]
 // 		currentSum = max(v1, v2)
 
 // 		if currentSum > maxSum {
