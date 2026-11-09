@@ -12,7 +12,7 @@ func main() {
 	arr := []int{-2, 0, 1, 3}
 	target := 2
 	fmt.Println(smaller(arr, target))
-}c
+}
 
 func smaller(arr []int, target int) int {
 	sort.Ints(arr)
@@ -20,7 +20,7 @@ func smaller(arr []int, target int) int {
 	count := 0
 
 	for i := 0; i < len(arr)-2; i++ {
-		left := i + 1
+		left := 0
 		right := len(arr) - 1
 
 		for left < right {
@@ -36,9 +36,34 @@ func smaller(arr []int, target int) int {
 			}
 		}
 	}
-
 	return count
 }
+
+// func smaller(arr []int, target int) int {
+// 	sort.Ints(arr)
+
+// 	count := 0
+
+// 	for i := 0; i < len(arr)-2; i++ {
+// 		left := i + 1
+// 		right := len(arr) - 1
+
+// 		for left < right {
+// 			sum := arr[i] + arr[left] + arr[right]
+
+// 			if sum < target {
+// 				count += right - left
+// 				left++
+// 			}
+
+// 			if sum >= target {
+// 				right--
+// 			}
+// 		}
+// 	}
+
+// 	return count
+// }
 
 // func smaller(arr []int, target int) int {
 // 	sort.Ints(arr)
