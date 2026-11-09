@@ -85,6 +85,8 @@ func main() {
 	ll.Insert(1)
 
 	ll.Display()
+
+	fmt.Println("is palindrome : ", ll.isPalindrome())
 }
 
 // package main
