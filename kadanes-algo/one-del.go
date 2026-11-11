@@ -27,7 +27,7 @@ func oneDeletion(arr []int) int {
 		if prevOneDelete == math.MinInt {
 			oneDelete = prevNoDelete
 		} else {
-			oneDelete = max(prevOneDelete, prevOneDelete+arr[i])
+			oneDelete = max(prevNoDelete, prevOneDelete+arr[i])
 		}
 
 		result = max(result, max(noDelete, oneDelete))
