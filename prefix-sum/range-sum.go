@@ -38,3 +38,8 @@ func main() {
 	fmt.Println(numArray.SumRange(2, 5))
 	fmt.Println(numArray.SumRange(0, 5))
 }
+
+// Complexity
+// - Constructor: O(n)
+// - SumRange: O(1)
+// - Space: O(n)
