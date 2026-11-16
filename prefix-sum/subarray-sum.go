@@ -33,3 +33,6 @@ func subarraySum(arr []int, k int) int {
 
 	return count
 }
+
+// time O(n)
+// space O(n)
