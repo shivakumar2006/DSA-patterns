@@ -54,7 +54,8 @@ func sum(arr []int) [][]int {
 // sorting O(n log n)
 // two pointers O(n^2)
 // overall time O(n^2)
-// space O(1)
+// space O(1) excluding output
+// space O(n^2) worst case
 
 // func sum(arr []int) [][]int {
 // 	sort.Ints(arr)
