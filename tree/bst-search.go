@@ -62,21 +62,23 @@ func main() {
 
 	var root *Node
 
+	// Create BST
 	for _, value := range values {
 		root = insert(root, value)
 	}
 
-	fmt.Println("Binary search tree : ")
+	fmt.Println("Original Binary Search Tree:")
 	display(root, 0)
 
-	result := search(root, 40)
+	// Search value
+	target := 30
+	result := search(root, target)
 
 	if result != nil {
-		fmt.Println("value found : ", result.Data)
+		fmt.Println("\nValue found:", target)
+		fmt.Println("Subtree:")
+		display(result, 0)
 	} else {
-		fmt.Println("value not found")
+		fmt.Println("\nValue not found:", target)
 	}
-
-	fmt.Println("Search Result:")
-	display(result, 0)
 }
