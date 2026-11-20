@@ -13,7 +13,7 @@ func main() {
 }
 
 func sum(arr []int) [][]int {
-	sort.Ints(arr)
+	sort.Ints(arr) // O(n log n)
 
 	result := [][]int{}
 
@@ -25,7 +25,7 @@ func sum(arr []int) [][]int {
 		left := i + 1
 		right := len(arr) - 1
 
-		for left < right {
+		for left < right { // O(n^2)
 			sum := arr[i] + arr[left] + arr[right]
 
 			if sum == 0 {
@@ -50,6 +50,11 @@ func sum(arr []int) [][]int {
 	}
 	return result
 }
+
+// sorting O(n log n)
+// two pointers O(n^2)
+// overall time O(n^2)
+// space O(1)
 
 // func sum(arr []int) [][]int {
 // 	sort.Ints(arr)
