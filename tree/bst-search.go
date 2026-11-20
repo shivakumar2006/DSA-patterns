@@ -25,6 +25,22 @@ func insert(root *Node, val int) *Node {
 	return root
 }
 
+func search(root *Node, val int) *Node {
+	if root == nil {
+		return nil
+	}
+
+	if root.Data == val {
+		return root
+	}
+
+	if val < root.Data {
+		return search(root.Left, val)
+	}
+
+	return search(root.Right, val)
+}
+
 func display(root *Node, level int) {
 	if root == nil {
 		return
@@ -52,4 +68,15 @@ func main() {
 
 	fmt.Println("Binary search tree : ")
 	display(root, 0)
+
+	result := search(root, 40)
+
+	if result != nil {
+		fmt.Println("value found : ", result.Data)
+	} else {
+		fmt.Println("value not found")
+	}
+
+	fmt.Println("Search Result:")
+	display(result, 0)
 }
