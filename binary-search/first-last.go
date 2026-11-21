@@ -20,7 +20,7 @@ func search(arr []int, target int) []int {
 	}
 
 	return []int{first, last}
-} // time O(1), space O(1)
+} // time O(log n), space O(1)
 
 func first(arr []int, target int) int {
 	left := 0
