@@ -16,7 +16,7 @@ func main() {
 
 func isBadVersion(version int) bool {
 	return version >= bad
-}
+} // time O(1), space O(1)
 
 func firstBadVersion(n int) int {
 	left := 1
@@ -31,7 +31,9 @@ func firstBadVersion(n int) int {
 		}
 	}
 	return left
-}
+} // time O(log n), space O(1)
+
+// O(log n) + O(1) = O(log n)
 
 // time O(log n)
 // space O(1)
