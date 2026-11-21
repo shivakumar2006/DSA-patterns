@@ -26,4 +26,4 @@ func mySqrt(x int) int {
 		}
 	}
 	return result
-}
+} // Time: O(log n), Space: O(1)
