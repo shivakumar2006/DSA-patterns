@@ -45,3 +45,6 @@ func search(arr []int, target int) bool {
 
 	return false
 }
+
+// time O(log n)
+// space O(1)
