@@ -30,7 +30,8 @@ func minDays(bloomDay []int, m, k int) int {
 		}
 	}
 	return left
-}
+} // time O(n log D) D -> no. of days
+// space O(1)
 
 func canMakeBouquet(bloomDay []int, mid, m, k int) bool {
 	bouquet := 0
@@ -49,7 +50,10 @@ func canMakeBouquet(bloomDay []int, mid, m, k int) bool {
 		}
 	}
 	return bouquet >= m
-}
+} // time O(n), space O(1)
+
+// overall time complexity is O(n) + O(n log D) = O(n log D)
+// overall space complexity is O(1)
 
 // make a m bouquet
 // every bouquet have k adjacent flowers
