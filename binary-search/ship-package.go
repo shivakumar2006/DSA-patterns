@@ -17,9 +17,7 @@ func shipWithinDays(weights []int, days int) int {
 	right := 0
 
 	for _, weight := range weights {
-		if weight > left {
-			left = weight
-		}
+		left = max(left, weight)
 		right += weight
 	}
 
@@ -50,3 +48,10 @@ func canShip(weights []int, capacity, days int) bool {
 	}
 	return daysNeeded <= days
 } // time O(n), space O(1)
+
+// same as split array problem
+// we are searching for the minimum capacity that can ship all packages within D days
+// so left = max element and right = sum of all elements
+// and we use binary search to find the minimum capacity
+// if canShip returns true then right = mid
+// else left = mid + 1
