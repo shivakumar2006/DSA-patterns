@@ -16,9 +16,7 @@ func splitArr(arr []int, k int) int {
 	right := 0
 
 	for _, num := range arr {
-		if num > left {
-			left = num
-		}
+		left = max(left, num)
 		right += num
 	}
 
@@ -47,3 +45,15 @@ func canSplit(arr []int, capacity, k int) bool {
 	}
 	return subarrays <= k
 } // time O(n), space O(1)
+
+// first take left as the largest element in array and right as the total sum of the array
+// now find mid
+// then check if we can split the array in k subarrays with capacity mid
+// if yes then right = mid
+// else left = mid + 1
+
+// in canSplit we check if we can split the array in k subarrays with capacity mid
+// if yes then return true
+// else return false
+// time complexity of canSplit is O(n)
+// space complexity of canSplit is O(1)
