@@ -29,6 +29,17 @@ func reverse(s []byte) string {
 // 		left++
 // 		right--
 // 	}
+// 	return string(s)
+// } // time O(n), space O(1)
+
+// func reverse(s []byte) string {
+// 	left := 0
+// 	right := len(s) - 1
+// 	for left < right {
+// 		s[left], s[right] = s[right], s[left]
+// 		left++
+// 		right--
+// 	}
 
 // 	return string(s)
 // }
